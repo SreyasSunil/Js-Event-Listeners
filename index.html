@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>EventListeners</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+      <div class="container mt-4">
+
+          <h1>Mini project on Event Listeners</h1>
+  
+      <ul>
+          <li>Create 3 inputs</li>
+          <li>Change bg color, text color and page font size as you type the inputs.</li>
+      </ul>
+  
+      <div>
+          <label for="bgColor">Background Color:</label>
+          <input type="text" id="bgColor" class="form-control js-bgColor">
+      </div>
+  
+      <div>
+          <label for="txtColor">Text Color:</label>
+          <input type="text" id="txtColor" class="form-control js-txtColor">
+      </div>
+  
+      <div>
+          <label for="fontSize">Font Size:</label>
+          <input type="number" id="fontSize" class="form-control js-fontSize">
+      </div>
+      </div>
+
+
+    <script>
+        var bgColor = document.querySelector('.js-bgColor')
+        var txtColor = document.querySelector('.js-txtColor')
+        var fontSize = document.querySelector('.js-fontSize')
+        var body = document.querySelector('body');
+
+        bgColor.addEventListener('keyup',function(e){
+            body.style.backgroundColor = e.target.value
+        });
+
+        txtColor.addEventListener('keyup',function(e){
+            body.style.color = e.target.value
+        });
+
+        fontSize.addEventListener('keyup',function(e){
+            body.style.fontSize = e.target.value + 'px'
+        });
+
+
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script> -->
+  </body>
+</html>
